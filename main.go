@@ -20,6 +20,9 @@ func main() {
 
 	// define routes
 	http.HandleFunc("/", index)
+	http.Handle("/favicon.ico", http.NotFoundHandler())
+	http.HandleFunc("/terms", terms)
+	http.HandleFunc("/privacy", privacy)
 
 	//mux.ServeFiles("/public", http.Dir(""))
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("./public"))))
@@ -30,12 +33,44 @@ func main() {
 
 // root route handler
 func index(w http.ResponseWriter, r *http.Request) {
+
 	if r.URL.Path != "/" {
 		errorHandler(w, r, http.StatusNotFound)
 		return
 	}
 	// execute tamplate
 	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+}
+
+func terms(w http.ResponseWriter, r *http.Request) {
+
+	if r.URL.Path != "/terms" {
+		errorHandler(w, r, http.StatusNotFound)
+		return
+	}
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "terms.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+}
+
+func privacy(w http.ResponseWriter, r *http.Request) {
+
+	if r.URL.Path != "/privacy" {
+		errorHandler(w, r, http.StatusNotFound)
+		return
+	}
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "privacy.gohtml", nil)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -43,6 +78,8 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
+	fmt.Println(r.URL, "not found")
+
 	w.WriteHeader(status)
 	if status == http.StatusNotFound {
 		err := tpl.ExecuteTemplate(w, "404.gohtml", nil)

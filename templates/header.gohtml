@@ -35,6 +35,7 @@
 
   <script src="/assets/components/jquery/dist/jquery.js"></script>
 
+
   <!-- REVOLUTION JS FILES -->
   <script type="text/javascript" src="/assets/components/slider/js/jquery.themepunch.tools.min.js"></script>
   <script type="text/javascript" src="/assets/components/slider/js/jquery.themepunch.revolution.min.js"></script>
@@ -45,13 +46,18 @@
 </head>
 
 <body>
-
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
   <div id="page" class="hfeed site">
 
     <nav id="mobile-menu">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#about">About us</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="/company" class="nav-link">COMPANY</a></li>
+        <li class="nav-item"><a href="/service" class="nav-link">SERVICES</a></li>
+        <li class="nav-item"><a href="carriers" class="nav-link">CARRIERS</a></li>
+        <li class="nav-item"><a href="contact-us" class="nav-link">CONTACT US</a></li>
 
       </ul>
     </nav>
@@ -60,7 +66,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-10 col-lg-2 site-branding">
-            <a href="index.html" rel="home">
+            <a href="/" rel="home">
               <img src="/assets/images/logo/logo.png" alt="Transport – Transport, Logistic &amp; Warehouse WP">
             </a>
           </div>
