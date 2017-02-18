@@ -153,7 +153,7 @@
 
     <div id="search">
       <button type="button" class="close">×</button>
-      <form>
+      <form action="/" method="post" >
         <input type="search" value="" placeholder="type keyword(s) here" />
         <button type="submit" class="btn btn-primary">SEARCH</button>
       </form>
@@ -178,16 +178,17 @@
             <li>
               <h3>CLIENT LOGIN</h3>
               <br>
-              <form action="#" method="post" novalidate="novalidate">
 
-                <input class="form-control" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Your name here">
+              <form action="/" method="post">
+
+                <input class="form-control" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="LOGIN">
 
 
                 <br>
-                <input class="form-control" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="password">
+                <input class="form-control" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="PASSWORD">
                 <br>
 
-                <input class="btn btn-primary" type="submit" value="LOGIN">
+                <button class="btn btn-primary" type="submit">LOGIN </button>
 
 
               </form>

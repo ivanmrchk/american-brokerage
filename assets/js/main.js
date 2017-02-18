@@ -22,10 +22,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('form').submit(function(event) {
-        event.preventDefault();
-        return false;
-    });
+
 
     // Menu
     $('nav#mobile-menu').mmenu({

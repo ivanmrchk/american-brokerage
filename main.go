@@ -5,7 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
-	_ "github.com/julienschmidt/httprouter"
+	"github.com/julienschmidt/httprouter"
 )
 
 var tpl *template.Template
@@ -16,28 +16,34 @@ func main() {
 	tpl = template.Must(template.ParseGlob("templates/*"))
 
 	// set new router
-	//mux := httprouter.New()
+	mux := httprouter.New()
 
 	// define routes
-	http.HandleFunc("/", index)
-	http.Handle("/favicon.ico", http.NotFoundHandler())
-	http.HandleFunc("/terms", terms)
-	http.HandleFunc("/privacy", privacy)
+	mux.GET("/", index)
+	mux.POST("/", postIndex)
+	mux.GET("/terms", terms)
+	mux.GET("/privacy", privacy)
+	mux.NotFound = http.HandlerFunc(customNotFound)
 
-	//mux.ServeFiles("/public", http.Dir(""))
-	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("./public"))))
-
-	http.ListenAndServe(":8080", nil)
+	// serving static files
+	mux.ServeFiles("/assets/*filepath", http.Dir("assets"))
+	http.ListenAndServe(":8080", mux)
 
 }
 
 // root route handler
-func index(w http.ResponseWriter, r *http.Request) {
+func index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
-	if r.URL.Path != "/" {
-		errorHandler(w, r, http.StatusNotFound)
-		return
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+
+	if err != nil {
+		fmt.Println(err)
 	}
+
+}
+func postIndex(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	fmt.Println("a")
 	// execute tamplate
 	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
 
@@ -47,12 +53,8 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func terms(w http.ResponseWriter, r *http.Request) {
-
-	if r.URL.Path != "/terms" {
-		errorHandler(w, r, http.StatusNotFound)
-		return
-	}
+// terms route handler
+func terms(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 	// execute tamplate
 	err := tpl.ExecuteTemplate(w, "terms.gohtml", nil)
@@ -62,12 +64,8 @@ func terms(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func privacy(w http.ResponseWriter, r *http.Request) {
-
-	if r.URL.Path != "/privacy" {
-		errorHandler(w, r, http.StatusNotFound)
-		return
-	}
+// privacy route handler
+func privacy(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 	// execute tamplate
 	err := tpl.ExecuteTemplate(w, "privacy.gohtml", nil)
@@ -77,16 +75,16 @@ func privacy(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
-	fmt.Println(r.URL, "not found")
+// custom 404 route hanler
+func customNotFound(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path, "not found route")
 
-	w.WriteHeader(status)
-	if status == http.StatusNotFound {
-		err := tpl.ExecuteTemplate(w, "404.gohtml", nil)
-		if err != nil {
-			fmt.Println(err)
-		}
+	err := tpl.ExecuteTemplate(w, "404.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
 	}
+
+	fmt.Println(r.Method)
 
 }
 
