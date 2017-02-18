@@ -139,8 +139,8 @@ func (q quoteForm) sendMail(fromName string, fromEmail string) {
 	// prepare email
 	m := gomail.NewMessage()
 	m.SetHeader("From", fromEmail)
-	m.SetHeader("To", "americanbrokerageapp@gmail.com")
-	//m.SetAddressHeader("Cc", "dan@example.com", "Dan")
+	m.SetHeader("To", "imarchenko@gmail.com")
+	m.SetAddressHeader("Cc", "americanbrokerageapp@gmail.com", "Admin")
 	m.SetHeader("Subject", fromName+" Has requested a quote fon your website.")
 	m.SetBody("text/html", result)
 	//m.Attach("template.html")
