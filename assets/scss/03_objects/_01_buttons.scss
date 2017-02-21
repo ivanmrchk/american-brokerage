@@ -1,0 +1,108 @@
+.btn {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: .1em;
+}
+
+.btn.btn-primary > i,
+.btn.btn-secondary > i {
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.btn.btn-add-to-cart, .btn.btn-add-to-cart-reverse {
+  border: none;
+  display: inline-block;
+  background-color: #ddd;
+  color: #111;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .1em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+}
+
+.btn.btn-add-to-cart:after, .btn.btn-add-to-cart-reverse:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 46px 0 0 30px;
+  border-color: transparent transparent transparent #dddddd;
+  position: absolute;
+  top: 0;
+  right: -30px;
+}
+
+.btn.btn-add-to-cart:hover, .btn.btn-add-to-cart-reverse:hover, .btn.btn-add-to-cart:active, .btn.btn-add-to-cart-reverse:active, .btn.btn-add-to-cart:focus, .btn.btn-add-to-cart-reverse:focus {
+  background: #ca1f26;
+  color: #fff;
+}
+
+.btn.btn-add-to-cart:hover:after, .btn.btn-add-to-cart-reverse:hover:after, .btn.btn-add-to-cart:active:after, .btn.btn-add-to-cart-reverse:active:after, .btn.btn-add-to-cart:focus:after, .btn.btn-add-to-cart-reverse:focus:after {
+  border-color: transparent transparent transparent #ca1f26;
+}
+
+.btn.btn-add-to-cart-reverse {
+  background: #ca1f26;
+  color: #fff;
+}
+
+.btn.btn-add-to-cart-reverse:after {
+  border-color: transparent transparent transparent #ca1f26;
+}
+
+.btn.btn-add-to-cart-reverse:hover, .btn.btn-add-to-cart-reverse:active, .btn.btn-add-to-cart-reverse:focus {
+  background: #ddd;
+  color: #111;
+}
+
+.btn.btn-add-to-cart-reverse:hover:after, .btn.btn-add-to-cart-reverse:active:after, .btn.btn-add-to-cart-reverse:focus:after {
+  border-color: transparent transparent transparent #ddd;
+}
+
+.btn.btn-download {
+  padding: 15px 20px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #111;
+  letter-spacing: -.02em;
+}
+
+.sidebar .btn.btn-download {
+  width: 100%;
+  text-align: left;
+}
+
+.btn.btn-download i {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #ca1f26;
+}
+
+.rating {
+  line-height: 1;
+}
+
+.rating .fa-stack {
+  font-size: 6px;
+}
+
+.rating .fa-star-o {
+  color: #999;
+  font-size: 14px;
+}
+
+.rating .fa-star {
+  color: #FFCA28;
+  font-size: 14px;
+}
+
+.rating .fa-star + .fa-star-o {
+  color: #FFCA28;
+}

@@ -1,0 +1,125 @@
+/* Custom heading */
+.custom-heading {
+  text-align: center;
+  width: 100%;
+}
+
+.custom-heading > * {
+  vertical-align: middle;
+}
+
+.home-section .custom-heading {
+  margin-bottom: 50px;
+}
+
+.custom-heading:before {
+  color: #ca1f26;
+  content: "\\\\";
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Times New Roman", "Bitstream Charter", Times, serif;
+}
+
+.custom-heading:after {
+  color: #ca1f26;
+  content: "\\\\";
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  line-height: 1;
+  font-family: "Times New Roman", "Bitstream Charter", Times, serif;
+}
+
+.custom-heading.part-heading:after,
+.custom-heading.part-heading:before {
+  font-size: 27px;
+  letter-spacing: -3px;
+}
+
+.custom-heading.section-heading:after,
+.custom-heading.section-heading:before {
+  font-size: 36px;
+  letter-spacing: -5px;
+  margin-top: 2px;
+}
+
+.custom-heading > * {
+  margin-bottom: 0;
+  letter-spacing: .05em;
+}
+
+.custom-heading h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+}
+
+.testimonials .custom-heading h1,
+.request .custom-heading h1 {
+  color: #fff;
+}
+
+.custom-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+}
+
+.custom-heading h3 {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: .05em;
+}
+
+.custom-heading.three-slashes, .custom-heading.two-slashes {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.custom-heading.three-slashes.part-heading, .custom-heading.part-heading.two-slashes {
+  margin-bottom: 30px;
+}
+
+.custom-heading.three-slashes.section-heading, .custom-heading.section-heading.two-slashes {
+  margin-bottom: 40px;
+}
+
+.custom-heading.three-slashes:before, .custom-heading.two-slashes:before,
+.custom-heading.three-slashes:after,
+.custom-heading.two-slashes:after {
+  content: "\\\\\\\\";
+  font-size: 33px;
+  letter-spacing: -5px;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -4px;
+  line-height: 1;
+  font-weight: bold;
+  font-family: "Times New Roman", "Bitstream Charter", Times, serif;
+}
+
+.custom-heading.three-slashes:after, .custom-heading.two-slashes:after {
+  display: none;
+}
+
+.custom-heading.two-slashes {
+  text-align: center;
+}
+
+.custom-heading.two-slashes:before, .custom-heading.two-slashes:after {
+  content: "\\\\";
+  margin-top: 0;
+}
+
+.custom-heading.two-slashes:after {
+  display: inline-block;
+}

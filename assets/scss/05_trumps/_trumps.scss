@@ -1,0 +1,136 @@
+/**
+ * #TRUMPS
+ */
+/*
+ * TRUMPS: @import all partial files of this folder here
+ * this file is imported by "../main.scss"
+ */
+/* Layout */
+.xs-start {
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.xs-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.xs-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+@media (min-width: 544px) {
+  .sm-start {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .sm-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .sm-end {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-start {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .md-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .md-end {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg-start {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .lg-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .lg-end {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl-start {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .xl-center {
+    justify-content: center;
+    text-align: center;
+  }
+  .xl-end {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
+.float-right {
+  float:right!important;
+}
+
+.float-left {
+  float:left!important;
+}
+.contact-meta {
+  margin-top:30px;
+}
+.contact-meta h3 {
+  font-size: 20px;
+}
+.contact-meta ul {
+  list-style: none;
+  margin-top:15px;
+}
+.contact-meta li {
+  margin: 10px 0;
+}
+
+.contact-meta li i {
+  color: #ca1f26;
+  padding-right: 7px;
+}
+.margin-left-15 {
+  margin-left: 15px!important;
+}
+
+.nopadding {
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+
+#ppBody
+{
+    font-size:11pt;
+    width:100%;
+    margin:0 auto;
+    text-align:justify;
+}
+
+#ppHeader
+{
+    font-family:verdana;
+    font-size:21pt;
+    width:100%;
+    margin:0 auto;
+}
+
+.ppConsistencies
+{
+    display:none;
+}

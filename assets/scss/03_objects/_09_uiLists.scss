@@ -1,0 +1,40 @@
+/* UI Lists */
+.list-group a {
+  color: #666;
+}
+
+.list-group a:hover, .list-group a:active, .list-group a:focus {
+  color: #ca1f26;
+}
+
+.list-group-item {
+  display: block;
+  word-wrap: break-word;
+  font-size: 14px;
+  font-weight: 600;
+  padding: .4375rem 0;
+}
+
+.sidebar .list-group-item:first-child {
+  padding-top: 0 !important;
+}
+
+.list-group-item + li {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.list-group-item .label {
+  color: #888;
+  font-weight: normal;
+}
+
+.list-item-icon i {
+  font-size: 13px;
+  color: #ca1f26;
+  margin-right: 5px;
+}
+
+.list-item-icon + .list-item-icon {
+  margin-top: 10px;
+}

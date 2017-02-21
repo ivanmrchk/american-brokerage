@@ -1,0 +1,55 @@
+/* Shopping Cart */
+.table-shopping-cart {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.table-shopping-cart .product-remove {
+  color: #000;
+}
+
+.table-shopping-cart .product-name {
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .05em;
+}
+
+.table-shopping-cart .product-price,
+.table-shopping-cart .product-total,
+.table-cart-totals .product-price,
+.table-cart-totals .product-total {
+  color: #ca1f26;
+  letter-spacing: .05em;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.table-shopping-cart .product-qty input {
+  max-width: 80px;
+  border: none;
+}
+
+.table-shopping-cart .product-qty button {
+  height: 48px;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  background: #eee;
+}
+
+.table-shopping-cart .actions #coupon_code {
+  width: 270px;
+  margin-right: 5px;
+}
+
+.table-cart-totals {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.table-cart-totals td {
+  padding-left: 30px;
+}
+
+.table-cart-totals .product-price,
+.table-cart-totals .product-total {
+  font-size: 14px;
+}

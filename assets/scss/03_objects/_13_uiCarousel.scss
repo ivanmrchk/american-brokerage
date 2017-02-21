@@ -1,0 +1,70 @@
+/* UI carousel */
+.ui-carousel blockquote {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #888;
+  font-size: 0.9375rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  border: none;
+}
+
+.ui-carousel .quote {
+  background-color: #fff;
+  padding: 30px 25px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+}
+
+.ui-carousel .quote:before {
+  content: "\f10d";
+  font-size: 30px;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #999;
+}
+
+.ui-carousel .author {
+  display: block;
+  float: left;
+  padding: 15px 20px;
+  margin: 0 0 -70px -25px;
+  line-height: 1;
+  position: relative;
+  background: #ca1f26;
+}
+
+.ui-carousel .author:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 68px 0 0 30px;
+  border-color: transparent;
+  border-left-color: #ca1f26;
+  position: absolute;
+  top: 0;
+  right: -30px;
+}
+
+.ui-carousel .author span:first-child {
+  display: block;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  font-style: normal;
+}
+
+.ui-carousel .author span:last-child {
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}

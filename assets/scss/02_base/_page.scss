@@ -1,0 +1,21 @@
+.site {
+  overflow: hidden;
+}
+
+html {
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#qerror,
+#cerror {
+  opacity: 0;
+  color: red;
+  border: 1px solid red;
+  padding: 7px;
+  transform: .25s;
+}

@@ -1,0 +1,85 @@
+/* About List */
+/* About Section */
+.about-section {
+  background: url("../images/about/1920x550/bg-01.jpg");
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-section.style-3 .about-content:before {
+  background: #fff;
+  opacity: 1;
+}
+
+.about-section.style-3 .about-content:after {
+  border-color: transparent transparent transparent #fff;
+  opacity: 1;
+}
+
+.about-section .custom-heading > *,
+.about-section .about-sub-heading {
+  color: #fff;
+}
+
+.about-section.style-3 .custom-heading > *,
+.about-section.style-3 .about-sub-heading,
+.about-section.style-4 .custom-heading > *,
+.about-section.style-4 .about-sub-heading {
+  color: #232331;
+}
+
+.about-section .about-sub-heading {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.about-section .about-content {
+  padding: 70px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.about-section .about-content:before {
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  left: -800px;
+  z-index: -1;
+  opacity: .95;
+  background: #232331;
+}
+
+.about-section .about-content:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 600px 0 0 300px;
+  border-color: transparent transparent transparent #232331;
+  position: absolute;
+  top: 0;
+  right: -300px;
+  opacity: .95;
+}
+
+.about-section.style-4 .about-content:before, .about-section.style-4 .about-content:after {
+  opacity: 1;
+}
+
+.about-section.style-4 .about-content:before {
+  background: #fff;
+}
+
+.about-section.style-4 .about-content:after {
+  border-color: transparent transparent transparent #fff;
+}
+
+.about-description p {
+  margin-bottom: 25px;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,43 @@
+/* Skills progress bar */
+#skills p {
+  line-height: 1;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 14px;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #232331;
+  margin-bottom: 10px;
+  letter-spacing: .05em;
+}
+
+#skills span {
+  font-size: 14px;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ca1f26;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+#skills .ui-progress + p {
+  margin-top: 10px;
+}
+
+.ui-progress {
+  background-color: #f3f3f3;
+  height: 30px;
+  width: 100%;
+  border: 1px solid #232331;
+}
+
+.ui-progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+
+.ui-progress::-webkit-progress-value {
+  background-color: #232331;
+}
+
+.ui-progress::-moz-progress-bar {
+  background-color: #fff;
+}

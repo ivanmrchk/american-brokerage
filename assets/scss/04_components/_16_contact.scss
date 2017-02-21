@@ -1,0 +1,29 @@
+/* Contact */
+#map-canvas {
+  margin-bottom: 70px;
+}
+
+.info-contact .part-heading {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.info-contact p {
+  color: #858585;
+}
+
+.info-contact .office {
+  color: #666;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .info-contact .office {
+    margin-bottom: 70px;
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1.875rem;
+}

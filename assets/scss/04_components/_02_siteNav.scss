@@ -1,0 +1,195 @@
+/* Site Navs */
+.menu-item, .page_item {
+  display: inline-block;
+}
+
+.top-menu-bar {
+  position: relative;
+}
+
+header.style-2 .top-menu-bar {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+header.style-4 .top-menu-bar:before,
+header.style-7 .top-menu-bar:before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+header.style-5 .top-menu-bar {
+  background: #232331;
+}
+
+header.style-6 .top-menu-bar {
+  background: #ca1f26;
+}
+
+.top-menu-bar a {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #777777;
+}
+
+.top-menu-bar a:hover, .top-menu-bar a:active, .top-menu-bar a:focus {
+  color: #232331;
+}
+
+header.style-2 .top-menu-bar a {
+  color: #aaa;
+}
+
+header.style-2 .top-menu-bar a:hover, header.style-2 .top-menu-bar a:active, header.style-2 .top-menu-bar a:focus {
+  color: #fff;
+}
+
+header.style-4 .top-menu-bar a,
+header.style-5 .top-menu-bar a,
+header.style-7 .top-menu-bar a {
+  color: #aaa;
+}
+
+header.style-4 .top-menu-bar a:hover, header.style-4 .top-menu-bar a:active, header.style-4 .top-menu-bar a:focus,
+header.style-5 .top-menu-bar a:hover,
+header.style-5 .top-menu-bar a:active,
+header.style-5 .top-menu-bar a:focus,
+header.style-7 .top-menu-bar a:hover,
+header.style-7 .top-menu-bar a:active,
+header.style-7 .top-menu-bar a:focus {
+  color: #fff;
+}
+
+header.style-6 .top-menu-bar a {
+  color: #fff;
+}
+
+header.style-6 .top-menu-bar a:hover, header.style-6 .top-menu-bar a:active, header.style-6 .top-menu-bar a:focus {
+  color: #fff;
+}
+
+.top-menu-bar:before {
+  content: '';
+  position: absolute;
+  left: -900px;
+  right: -900px;
+  height: 1px;
+  bottom: 0;
+  background-color: #dddddd;
+}
+
+header.style-2 .top-menu-bar:before,
+header.style-6 .top-menu-bar:before {
+  display: none;
+}
+
+.top-menu-bar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.top-menu-bar .social-menu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  transform: skew(20deg);
+}
+
+header.style-2 .top-menu-bar .social-menu:before,
+header.style-5 .top-menu-bar .social-menu:before,
+header.style-6 .top-menu-bar .social-menu:before {
+  display: none;
+}
+
+header.style-4 .top-menu-bar .social-menu:before,
+header.style-7 .top-menu-bar .social-menu:before {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-menu {
+  position: relative;
+  z-index: 1;
+}
+
+.top-menu .menu-item {
+  margin-right: 15px;
+}
+
+.top-menu .menu-item a {
+  line-height: 50px;
+  display: block;
+}
+
+.top-menu .menu-item a:after {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\f178";
+  margin-left: 10px;
+}
+
+.top-menu .menu-item:hover {
+  text-decoration: none;
+}
+
+.top-menu .menu-item:hover .sub-menu {
+  opacity: 1;
+}
+
+.top-menu .sub-menu {
+  position: absolute;
+  line-height: 1;
+  background-color: #fff;
+  left: 0;
+  width: 120px;
+  opacity: 0;
+}
+
+.top-menu .sub-menu .menu-item {
+  padding: 5px 10px;
+  border-bottom: 1px solid #eeeeee;
+  display: block;
+}
+
+.top-menu .sub-menu .menu-item a {
+  font-size: 12px;
+  color: #111;
+  line-height: 1;
+}
+
+.top-menu .sub-menu .menu-item a:after {
+  display: none;
+}
+
+.social-menu {
+  text-align: center;
+}
+
+.social-menu .menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.social-menu .menu li:first-child {
+  margin-left: 0;
+}
+
+.social-menu .menu li:before {
+  display: none;
+}
+
+.social-menu .menu li a {
+  line-height: 50px;
+  z-index: 1;
+  position: relative;
+}

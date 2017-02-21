@@ -1,0 +1,88 @@
+/* Section */
+.page-ground main section,
+.page-cargo main section,
+.page-ware-housing main section,
+.page-logistic main section,
+.page-trucking-service main section,
+.page-storage main section {
+  margin-bottom: 40px;
+}
+
+.highlight-part {
+  padding: 40px 30px;
+}
+
+.download-section {
+  padding: 50px 35px;
+  background: #eee;
+  border-top: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.download-section h2 {
+  vertical-align: middle;
+  font-size: 18px;
+  letter-spacing: .05em;
+  margin: 10px 0;
+}
+
+.home-section {
+  margin: 0 !important;
+  padding: 70px 0;
+}
+
+/* Post layout */
+.blog-grid.home-section {
+  padding-top: 0;
+}
+
+.blog-grid.home-section .custom-heading {
+  background: url("../images/posts/1920x266/bg-01.jpg");
+  padding-top: 70px;
+  padding-bottom: 160px;
+  margin: 0;
+  margin-bottom: -112px;
+}
+
+.blog-grid.home-section .custom-heading h1 {
+  color: #fff;
+}
+
+.blog-grid .post-image {
+  margin-bottom: 30px;
+}
+
+.blog-grid .post header h3.entry-title {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.blog-list .list-item {
+  margin-bottom: 20px;
+}
+
+.blog-list .list-item::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.blog-list .list-item .post-image {
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 0;
+}
+
+.blog-list .list-item .list-content {
+  overflow: hidden;
+}
+
+.blog-list.featured-post-list header {
+  margin-bottom: 15px;
+}
+
+.blog-list.featured-post-list header h3.entry-title {
+  font-size: 15px;
+  letter-spacing: .05em;
+  margin-bottom: 0px;
+}

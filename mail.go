@@ -8,8 +8,16 @@ import (
 	gomail "gopkg.in/gomail.v2"
 )
 
+type QuoteForm struct {
+	Name        string
+	Email       string
+	Phone       string
+	CompanyName string
+	Message     string
+}
+
 // send quote to email
-func (q quoteForm) SendQuote() {
+func (q QuoteForm) SendQuote() {
 
 	// execute email template
 	t := template.New("send-q.gohtml")
@@ -29,10 +37,18 @@ func (q quoteForm) SendQuote() {
 
 	// prepare email
 	m := gomail.NewMessage()
-	m.SetHeader("From", q.Email)
-	m.SetHeader("To", "imarchenko@gmail.com")
-	m.SetAddressHeader("Cc", "americanbrokerageapp@gmail.com", "Admin")
-	m.SetHeader("Subject", q.Name+" Has requested a quote fon your website.")
+
+	m.SetHeaders(map[string][]string{
+		"From":     {m.FormatAddress(q.Email, q.Name)},
+		"To":       {m.FormatAddress("imarchenko@gmail.com", "Ivan")},
+		"Cc":       {m.FormatAddress("mericanbrokerageapp@gmail.com", "Admin")},
+		"Reply-to": {m.FormatAddress("marchenkoi@outlook.com", "Jack")},
+		"Subject":  {q.Name + " Has requested a quote fon your website."},
+	})
+	// m.SetHeader("From", q.Email)
+	// m.SetHeader("To", "imarchenko@gmail.com")
+	// m.SetAddressHeader("Cc", "americanbrokerageapp@gmail.com", "Admin")
+	// m.SetHeader("Subject", q.Name+" Has requested a quote fon your website.")
 	m.SetBody("text/html", result)
 	//m.Attach("template.html")
 

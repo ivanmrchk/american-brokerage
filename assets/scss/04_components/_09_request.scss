@@ -1,0 +1,154 @@
+/* Request */
+.request {
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .request {
+    background: #232331;
+  }
+}
+
+.request.style-2 .request-content {
+  background: #ca1f26;
+}
+
+.request.style-2 p {
+  color: #fff;
+}
+
+.request.style-2 .custom-heading:before, .request.style-2 .custom-heading:after {
+  color: #fff;
+}
+
+.request.style-2 .request-form input,
+.request.style-2 .request-form textarea {
+  background: #fff;
+  color: #888;
+}
+
+@media (min-width: 1200px) {
+  .request.style-2 .request-content:before {
+    border-right-color: #ca1f26;
+  }
+  .request.style-2 .request-content:after {
+    background: #ca1f26;
+  }
+}
+
+.request .request-content {
+  padding-top: 90px;
+  padding-bottom: 75px;
+  background: #232331;
+}
+
+@media (min-width: 1200px) {
+  .request .request-content:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 300px 700px 0;
+    border-color: transparent;
+    border-right-color: #232331;
+    position: absolute;
+    top: 0;
+    left: -300px;
+  }
+  .request .request-content:after {
+    content: '';
+    background: #232331;
+    position: absolute;
+    right: -800px;
+    width: 800px;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.request .part-heading > h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.request p {
+  margin-bottom: 30px;
+  color: #aaa;
+  letter-spacing: -.02em;
+}
+
+.request-form input, .request-form textarea {
+  margin-bottom: 10px;
+  background-color: #65656F;
+  color: #FFFFFF;
+  border: none;
+}
+
+.request-form input::-webkit-input-placeholder, .request-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.request-form input::-moz-placeholder, .request-form textarea::-moz-placeholder {
+  color: #fff;
+}
+
+.request-form input:-ms-input-placeholder, .request-form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.request-form input::placeholder, .request-form textarea::placeholder {
+  color: #fff;
+}
+
+.request.style-2 .request-form input::-webkit-input-placeholder, .request.style-2 .request-form textarea::-webkit-input-placeholder {
+  color: #888;
+}
+
+.request.style-2 .request-form input::-moz-placeholder, .request.style-2 .request-form textarea::-moz-placeholder {
+  color: #888;
+}
+
+.request.style-2 .request-form input:-ms-input-placeholder, .request.style-2 .request-form textarea:-ms-input-placeholder {
+  color: #888;
+}
+
+.request.style-2 .request-form input::placeholder, .request.style-2 .request-form textarea::placeholder {
+  color: #888;
+}
+
+.request-form input:focus, .request-form textarea:focus {
+  background-color: #fff;
+  color: #888;
+}
+
+.request-form input:focus::-webkit-input-placeholder, .request-form textarea:focus::-webkit-input-placeholder {
+  color: #888;
+}
+
+.request-form input:focus::-moz-placeholder, .request-form textarea:focus::-moz-placeholder {
+  color: #888;
+}
+
+.request-form input:focus:-ms-input-placeholder, .request-form textarea:focus:-ms-input-placeholder {
+  color: #888;
+}
+
+.request-form input:focus::placeholder, .request-form textarea:focus::placeholder {
+  color: #888;
+}
+
+.request-form input[type="submit"] {
+  margin-bottom: 0;
+  background: #ca1f26;
+}
+
+.request.style-2 .request-form input[type="submit"] {
+  color: #ca1f26;
+}
+
+@media (min-width: 992px) {
+  .request-form [class*='col-'] {
+    padding: 0 5px;
+  }
+}

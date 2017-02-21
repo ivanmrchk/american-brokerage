@@ -1,0 +1,39 @@
+/* Testimonials */
+.testimonials {
+  padding: 75px 0;
+  position: relative;
+}
+
+.testimonials .row {
+  display: block;
+}
+
+.testimonials:before {
+  content: '';
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #232331;
+  opacity: .95;
+}
+
+.testimonials.style-2:before {
+  background: #fff;
+}
+
+.testimonials.style-2 .custom-heading > * {
+  color: #232331;
+}
+
+.testimonials .section-heading {
+  margin-bottom: 65px;
+  color: #fff;
+}
+
+.testimonials .ui-carousel .quote {
+  border: none;
+}

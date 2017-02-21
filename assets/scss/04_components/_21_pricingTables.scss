@@ -1,0 +1,115 @@
+/* Pricing */
+.pricing .list-group-item {
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  background: initial;
+}
+
+.pricing .list-group-item + li {
+  border-color: #ddd;
+}
+
+.pricing .list-group-item:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.price-block {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+.price-block {
+  background-color: #FFF;
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.price-block:hover {
+  transform: scale(1.1);
+}
+
+.price-block .heading {
+  color: #FFF;
+  font-size: 15px;
+  letter-spacing: .4em;
+  font-weight: normal;
+}
+
+.price-details {
+  background-color: #232331;
+  color: #FFF;
+  padding: 40px 0 75px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .price-details:after {
+    content: '';
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -65px;
+    border: 0 solid transparent;
+    border-bottom-width: 0px;
+    border-top-width: 130px;
+    border-left: 740px solid #fff;
+    position: absolute;
+  }
+}
+
+.price-details .price {
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: .05em;
+  font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.price-details .duration {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.details {
+  padding-bottom: 30px;
+}
+
+.details ul li {
+  padding: 11px 0;
+  color: #868686;
+  margin: 0 30px;
+}
+
+.special-price .price-details {
+  background-color: #ca1f26;
+  color: #FFF;
+}
+
+.pricing .btn-default {
+  background-color: #333;
+  color: #FFF;
+  border-color: #333;
+  width: auto;
+}
+
+.special-price .btn-default {
+  background-color: #3498DB;
+  border-color: #3498DB;
+}
+
+.pricing.style-2 .price-block {
+  background: #eee;
+}
+
+@media (min-width: 992px) {
+  .pricing.style-2 .price-details:after {
+    border-left-color: #eee;
+  }
+}

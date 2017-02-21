@@ -1,0 +1,71 @@
+/* Collapse */
+.accordion .panel {
+  border: 1px solid #ddd;
+  margin-bottom: .5rem;
+}
+
+.accordion .panel-title {
+  line-height: 1;
+  font-size: .875rem;
+  margin-bottom: 0;
+}
+
+.accordion .panel-title a {
+  position: relative;
+  padding: 17px 0;
+  display: block;
+  background: #232331;
+}
+
+.accordion .panel-title a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 55px;
+  background: #ca1f26;
+  -webkit-clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+  -moz-clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+}
+
+.accordion .panel-title i {
+  font-size: .875rem;
+  width: 40px;
+  text-align: center;
+  margin-right: 30px;
+  color: #fff;
+  float: left;
+  position: relative;
+  transition-duration: 0.3s;
+}
+
+.accordion .panel-title span {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: .05em;
+}
+
+.accordion .panel-content {
+  padding: 25px;
+}
+
+.accordion .panel-title a.collapsed {
+  background: none;
+  color: initial;
+}
+
+.accordion .panel-title a.collapsed:before {
+  background: #eee;
+}
+
+.accordion .panel-title a.collapsed i {
+  transform: rotate(-90deg);
+  color: #232331;
+}
+
+.accordion .panel-title a.collapsed span {
+  color: #232331;
+}

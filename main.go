@@ -6,20 +6,11 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	_ "github.com/julienschmidt/httprouter"
 )
 
 var tpl *template.Template
 
-type quoteForm struct {
-	Name        string
-	Email       string
-	Phone       string
-	CompanyName string
-	Message     string
-}
-
-func init() {
+func main() {
 
 	// parse template dir
 	tpl = template.Must(template.ParseGlob("templates/*"))
@@ -31,36 +22,26 @@ func init() {
 	// routes
 	// GET
 	r.HandleFunc("/", index)
+	r.HandleFunc("/company", company)
+	r.HandleFunc("/service", ltl)
+	r.HandleFunc("/ltl", ltl)
 	r.HandleFunc("/privacy", privacy)
 	r.HandleFunc("/terms", terms)
-
-	// POST
-	r.HandleFunc("/", postQuote).Methods("POST")
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
 
 	http.Handle("/", r)
 
-	//http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", nil)
+	fmt.Println("listening on port 8080")
 
 }
 
 // root route handler
 func index(w http.ResponseWriter, r *http.Request) {
 
-	// execute tamplate
-	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
-
-	if err != nil {
-		fmt.Println(err)
-	}
-
-}
-
-// get quote
-func postQuote(w http.ResponseWriter, r *http.Request) {
-
+	// parse form value
 	r.ParseForm()
 
 	// execute tamplate
@@ -70,16 +51,45 @@ func postQuote(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err)
 	}
 
-	// quote form data
-	q := quoteForm{Name: r.FormValue("qname"),
-		Email:       r.FormValue("qemail"),
-		Phone:       r.FormValue("qphone"),
-		CompanyName: r.FormValue("qcompanyName"),
-		Message:     r.FormValue("qmessage"),
+	if r.Method == http.MethodPost {
+
+		if err != nil {
+			fmt.Println(err)
+		}
+
+		// quote form data
+		q := QuoteForm{Name: r.FormValue("qname"),
+			Email:       r.FormValue("qemail"),
+			Phone:       r.FormValue("qphone"),
+			CompanyName: r.FormValue("qcompanyName"),
+			Message:     r.FormValue("qmessage"),
+		}
+
+		// send email
+		q.SendQuote()
 	}
 
-	// send email
-	q.SendQuote()
+}
+
+// company route handler
+func company(w http.ResponseWriter, r *http.Request) {
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "company.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+}
+
+// company route handler
+func ltl(w http.ResponseWriter, r *http.Request) {
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "ltl.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
 
 }
 

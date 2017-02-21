@@ -1,0 +1,15 @@
+/* Navigation Tabs */
+.nav-tabs .nav-link {
+  background: #232331;
+  color: #fff;
+}
+
+.nav-tabs + .tab-content {
+  padding: 35px 0;
+}
+
+.nav-tabs + .tab-content::after {
+  clear: both;
+  content: "";
+  display: table;
+}

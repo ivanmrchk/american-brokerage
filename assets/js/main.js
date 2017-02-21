@@ -9,6 +9,37 @@ jQuery(window).load(function() {
 jQuery(document).ready(function($) {
     'use strict';
 
+
+    // validator
+    // get quote
+    $("#getQuote").submit(function(event) {
+        console.log('click')
+        var qname = $("#qname")
+        var qemail = $("#qemail")
+        var qphone = $("#qphone")
+        var qcompanyName = $("#qcompanyName")
+        var qmessage = $("#qmessage")
+        if (qname.val() == "" && qemail.val() == "" && qphone.val() == "" && qcompanyName.val() == "" && qmessage.val() == "") {
+            event.preventDefault()
+            $("#qerror").css({
+                "opacity": 1
+            }).slow();
+        }
+    })
+    // contact modal
+    $("#contactModal").submit(function(event) {
+        console.log('click')
+        var cname = $("#cname")
+        var cemail = $("#cemail")
+        var cphone = $("#cphone")
+        var cmessage = $("#cmessage")
+        if (cname.val() == "" && cemail.val() == "" && cphone.val() == "" && cmessage.val() == "") {
+            event.preventDefault()
+            $("#cerror").css({
+                "opacity": 1
+            })
+        }
+    })
     // Search
     $('a[href="#search"]').on('click', function(event) {
         event.preventDefault();
