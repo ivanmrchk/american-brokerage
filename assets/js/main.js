@@ -9,37 +9,65 @@ jQuery(window).load(function() {
 jQuery(document).ready(function($) {
     'use strict';
 
-
+    function checkField(fieldName) {
+        if (fieldName.val() == "") {
+            fieldName.css({
+                "border": "1px solid red"
+            })
+            event.preventDefault()
+        }
+        fieldName.on('click', function() {
+            $(this).css({
+                "border": "1px solid rgba(0, 0, 0, .2)"
+            })
+        })
+    }
     // validator
     // get quote
     $("#getQuote").submit(function(event) {
-        console.log('click')
+
         var qname = $("#qname")
         var qemail = $("#qemail")
         var qphone = $("#qphone")
         var qcompanyName = $("#qcompanyName")
         var qmessage = $("#qmessage")
-        if (qname.val() == "" && qemail.val() == "" && qphone.val() == "" && qcompanyName.val() == "" && qmessage.val() == "") {
-            event.preventDefault()
-            $("#qerror").css({
-                "opacity": 1
-            }).slow();
-        }
+        checkField(qname);
+        checkField(qemail);
+        checkField(qphone);
+        checkField(qcompanyName);
+        checkField(qmessage);
+
+
+
     })
     // contact modal
     $("#contactModal").submit(function(event) {
-        console.log('click')
+
         var cname = $("#cname")
         var cemail = $("#cemail")
         var cphone = $("#cphone")
         var cmessage = $("#cmessage")
-        if (cname.val() == "" && cemail.val() == "" && cphone.val() == "" && cmessage.val() == "") {
-            event.preventDefault()
-            $("#cerror").css({
-                "opacity": 1
-            })
-        }
+        checkField(cname);
+        checkField(cemail);
+        checkField(cphone);
+        checkField(cmessage);
+
     })
+    $("#contactFormPage").submit(function(event) {
+
+        var cfname = $("#cfname")
+        var cfemail = $("#cfemail")
+        var cfphone = $("#cfphone")
+
+        var cfmessage = $("#cfmessage")
+        checkField(cfname);
+        checkField(cfemail);
+        checkField(cfphone);
+
+        checkField(cfmessage);
+
+    })
+
     // Search
     $('a[href="#search"]').on('click', function(event) {
         event.preventDefault();

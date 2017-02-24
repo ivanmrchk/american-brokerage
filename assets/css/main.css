@@ -6800,7 +6800,9 @@ Mobile Menu
   margin-bottom: 10px;
   background-color: #65656F;
   color: #FFFFFF;
-  border: none; }
+  border: none;
+  border: 1px solid transparent;
+  transition: .25s; }
 
 .request-form input::-webkit-input-placeholder, .request-form textarea::-webkit-input-placeholder {
   color: #fff; }

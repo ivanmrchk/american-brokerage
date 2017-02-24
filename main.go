@@ -1,26 +1,14 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
 	"html/template"
-	"log"
 	"net/http"
-
-	"google.golang.org/appengine"
-	"google.golang.org/appengine/mail"
 
 	"github.com/gorilla/mux"
 )
 
 var tpl *template.Template
-
-type QuoteForm struct {
-	Name, Email, Phone, CompanyName, Message string
-}
-type ContactForm struct {
-	Name, Email, Phone, Message string
-}
 
 // // // // // // // //
 //
@@ -48,44 +36,38 @@ func index(w http.ResponseWriter, r *http.Request) {
 			Message:     r.FormValue("qmessage"),
 		}
 
-		// execute email template
-		t := template.New("send-q.gohtml")
+		q.SendQuoteForm(w, r)
+	}
 
-		var err error
+}
 
-		t, err = t.ParseFiles("templates/send-q.gohtml")
-		if err != nil {
-			log.Println(err)
+// // // // // // // //
+//
+// contactus route handler
+func contactUs(w http.ResponseWriter, r *http.Request) {
+
+	// parse form value
+	r.ParseForm()
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "contact-us.gohtml", nil)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	if r.Method == http.MethodPost {
+
+		// quote form data
+		c := ContactForm{
+			Name:    r.FormValue("name"),
+			Email:   r.FormValue("email"),
+			Phone:   r.FormValue("phone"),
+			Subject: r.FormValue("subject"),
+			Message: r.FormValue("message"),
 		}
 
-		// convert email to string
-		var tpl bytes.Buffer
-		if err := t.Execute(&tpl, q); err != nil {
-			log.Println(err)
-		}
-
-		// template string
-		result := tpl.String()
-
-		// prep email
-		msg := &mail.Message{
-			Sender:   "americanbrokerageapp@gmail.com",
-			To:       []string{"Juliet imarchenko@gmail.com"},
-			ReplyTo:  q.Email,
-			Subject:  q.CompanyName + " has requested a quote from your website.",
-			HTMLBody: result,
-			// Attachments: []Attachment{
-			// 	Attachment{
-			// 		Name: "main.go",
-			// 	},
-			// },
-		}
-
-		// send email
-		c := appengine.NewContext(r)
-		if err := mail.Send(c, msg); err != nil {
-			log.Fatalln(err)
-		}
+		c.SendContactForm(w, r)
 	}
 
 }
@@ -174,6 +156,7 @@ func init() {
 	r.HandleFunc("/ltl", ltl)
 	r.HandleFunc("/privacy", privacy)
 	r.HandleFunc("/terms", terms)
+	r.HandleFunc("/contact-us", contactUs)
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
