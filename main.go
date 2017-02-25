@@ -74,6 +74,32 @@ func contactUs(w http.ResponseWriter, r *http.Request) {
 
 // // // // // // // //
 //
+// less tCarriers modal load route handler
+func carriers(w http.ResponseWriter, r *http.Request) {
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "carriers.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// send Form
+	if r.Method == http.MethodPost {
+
+		// quote form data
+		c := ContactForm{
+			Name:    r.FormValue("name"),
+			Email:   r.FormValue("email"),
+			Phone:   r.FormValue("phone"),
+			Subject: r.FormValue("subject"),
+			Message: r.FormValue("message"),
+		}
+
+		c.SendContactForm(w, r)
+	}
+}
+
+// // // // // // // //
+//
 // company route handler
 func company(w http.ResponseWriter, r *http.Request) {
 
@@ -87,11 +113,24 @@ func company(w http.ResponseWriter, r *http.Request) {
 
 // // // // // // // //
 //
-// company route handler
+// less then truck load route handler
 func ltl(w http.ResponseWriter, r *http.Request) {
 
 	// execute tamplate
 	err := tpl.ExecuteTemplate(w, "ltl.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+}
+
+// // // // // // // //
+//
+// less then truck load route handler
+func fullLoad(w http.ResponseWriter, r *http.Request) {
+
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "full-load.gohtml", nil)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -154,9 +193,11 @@ func init() {
 	r.HandleFunc("/company", company)
 	r.HandleFunc("/service", ltl)
 	r.HandleFunc("/ltl", ltl)
+	r.HandleFunc("/full-load", fullLoad)
 	r.HandleFunc("/privacy", privacy)
 	r.HandleFunc("/terms", terms)
 	r.HandleFunc("/contact-us", contactUs)
+	r.HandleFunc("/carriers", carriers)
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
