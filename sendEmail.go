@@ -40,7 +40,7 @@ func (q QuoteForm) SendQuoteForm(w http.ResponseWriter, r *http.Request) {
 	// prep email
 	msg := &mail.Message{
 		Sender:   "americanbrokerageapp@gmail.com",
-		To:       []string{"Juliet imarchenko@gmail.com"},
+		To:       []string{"Jack imarchenko@gmail.com"},
 		ReplyTo:  q.Email,
 		Subject:  q.Name,
 		HTMLBody: result,

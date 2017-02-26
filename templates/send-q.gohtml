@@ -1,15 +1,118 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html>
 
+<head>
+  <style media="screen">
+  body {
+    padding: 0!important;
+  }
+    .skew {
+      background-color: #ca1f26;
 
+    }
+    .skew img {
+      padding: 30px;
+      display: block;
+      width: 200px;
+
+
+    }
+h2 {
+  font-size: 2.25rem;
+font-weight: 700;
+display: inline-block;
+line-height: 1;
+color: rgba(0, 0, 0, 0.5);
+padding-left: 20px;
+}
+p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+
+    .main, .footer {
+      padding: 20px;
+    }
+    .main {
+
+      padding-bottom: 75px;
+    }
+    table {
+      width: 80%;
+      margin: 0 auto;border-spacing: 0px;
+    }
+    .t-title,
+    .t-data {
+      padding: 20px;
+
+    }
+    .t-title {
+      background:rgba(238, 238, 238, 0.59);
+      min-width: 200px;
+    }
+    .t-data {
+      background: rgba(226, 226, 226, 0.54);
+    }
+    .footer {
+
+      background: #232331;
+      height: 150px;
+    }
+    .footer p {
+      color: #aaa;
+      text-align: center;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
 
 <body>
-  <p>
-    <strong>Hello {{.Name}}</strong>
+  <header>
+  <div class="skew">
+      <img src="http://american-brokerage.com/assets/images/logo/logo.png" alt="" >
 
-  </p>
+  </div>
 
+  </header>
+
+  <div class="main">
+    <h2>New Quote Request</h2>
+    <p style="padding-left:20px">{{.Name}} has filled out a form on your website, and is expecting a call from you. <br>Bellow you will find all their contact information. </p><br><br>
+    <table>
+      <tbody>
+        <tr>
+          <td class="t-title">Name</td>
+          <td class="t-data">{{.Name}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Email</td>
+          <td class="t-data">{{.Email}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Contact Phone</td>
+          <td class="t-data">{{.Phone}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Company Name</td>
+          <td class="t-data">{{.CompanyName}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Message</td>
+          <td class="t-data">{{.Message}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer">
+    <p>This message was sent automaticaly. By heating reply you will send an email to {{.Name}} at {{.CompanyName}}
+    <br><br>
+    <a href="http://american-brokerage.com">American Brokerage</a></p>
+  </div>
 </body>
 
 </html>
