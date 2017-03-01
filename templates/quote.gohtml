@@ -1,0 +1,217 @@
+{{template "header" }}
+<div class="page-title" style="background-image: url('/assets/images/title/bg01.jpg')">
+  <div class="container">
+    <h1 class="entry-title">Quote</h1>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li class="active">Quote</li>
+    </ol>
+  </div>
+</div>
+
+
+
+
+<section class="info-contact">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-3 ">
+        <div class="make-it-fixed">
+          <div class="custom-heading part-heading three-slashes ">
+            <h2>CONTACT</h2>
+          </div>
+          <div class="office">
+            <p><i class="fa fa-map-marker"></i> 14 Tottenham Road, London, England.
+            </p>
+            <p><i class="fa fa-phone"></i> (102) 6666 8888 </p>
+            <p><i class="fa fa-envelope"></i> info@thememove.com </p>
+            <p><i class="fa fa-fax"></i> (102) 8888 9999 </p>
+            <p><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 18:00</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="contact-content col-lg-9">
+
+        <div class="custom-heading part-heading three-slashes">
+          <h2>REQUEST A QUOTE ONLINE OR CALL US AT 800-580-3101</h2>
+        </div>
+
+        <p>Please provide a few details regarding your truckload shipment. If possible, include information on the lane, commodity, pick-up/delivery dates and equipment needed</p>
+
+        <div class="contact-form">
+
+          <form  method="post"  id="getQuote">
+            <div class="row">
+              <div class="col-md-12">
+                <br>
+                <h3>General Information</h3>
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <!-- NAME -->
+              <div class="col-lg-4">
+                <input class="form-control" type="text" name="name" id="qname" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Your name here">
+              </div>
+            </div>
+            <div class="row">
+              <!-- TITLE -->
+              <div class="col-lg-4">
+                <input class="form-control" type="text" name="title" id="qtitle" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Title">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <br>
+                <h3>Company Information</h3>
+                <br>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <input class="form-control" type="text" name="companyName" id="qcompanyName" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <input class="form-control" type="text" name="companyAddress" id="qcompanyAddress" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Address">
+              </div>
+              <div class="col-md-4">
+                <input class="form-control" type="text" name="city" id="qcity" value="" size="40" aria-required="true" aria-invalid="false" placeholder="City">
+              </div>
+
+              <div class="col-md-2">
+                <select class="form-control" id="qstate">
+                	<option value="AL">AL</option>
+                	<option value="AK">AK</option>
+                	<option value="AZ">AZ</option>
+                	<option value="AR">AR</option>
+                	<option value="CA">CA</option>
+                	<option value="CO">CO</option>
+                	<option value="CT">CT</option>
+                	<option value="DE">DE</option>
+                	<option value="DC">DC</option>
+                	<option value="FL">FL</option>
+                	<option value="GA">GA</option>
+                	<option value="HI">HI</option>
+                	<option value="ID">ID</option>
+                	<option value="IL">IL</option>
+                	<option value="IN">IN</option>
+                	<option value="IA">IA</option>
+                	<option value="KS">KS</option>
+                	<option value="KY">KY</option>
+                	<option value="LA">LA</option>
+                	<option value="ME">ME</option>
+                	<option value="MD">MD</option>
+                	<option value="MA">MA</option>
+                	<option value="MI">MI</option>
+                	<option value="MN">MN</option>
+                	<option value="MS">MS</option>
+                	<option value="MO">MO</option>
+                	<option value="MT">MT</option>
+                	<option value="NE">NE</option>
+                	<option value="NV">NE</option>
+                	<option value="NH">NH</option>
+                	<option value="NJ">NJ</option>
+                	<option value="NM">NM</option>
+                	<option value="NY">NY</option>
+                	<option value="NC">NC</option>
+                	<option value="ND">ND</option>
+                	<option value="OH">OH</option>
+                	<option value="OK">OK</option>
+                	<option value="OR">OR</option>
+                	<option value="PA">PA</option>
+                	<option value="RI">RI</option>
+                	<option value="SC">SC</option>
+                	<option value="SD">SD</option>
+                	<option value="TN">TN</option>
+                	<option value="TX">TX</option>
+                	<option value="UT">UT</option>
+                	<option value="VT">VT</option>
+                	<option value="VA">VA</option>
+                	<option value="WA">WA</option>
+                	<option value="WV">WV</option>
+                	<option value="WI">WI</option>
+                	<option value="WY">WY</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <input class="form-control" type="text" name="zip" id="qzip" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Zip code">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <br>
+                <h3>Contact Information</h3>
+                <br>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <input class="form-control" type="email" name="email" id="qemail" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email">
+              </div>
+
+              <div class="col-md-4">
+                <input class="form-control" type="email" name="confirmEmail" id="qconfirmEmail" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Confirm Email">
+              </div>
+
+              <div class="col-md-4">
+                <input class="form-control" type="tel" name="phone" id="qphone" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Direct Line/Phone">
+              </div>
+              <div class="col-md-12">
+                <p><strong>How would you like to be contacted</strong></p>
+                <input lass="form-control" type="radio" name="prefferedWayContact" value="Phone" checked> Phone <span style="margin-right: 30px;"></span>
+                <input lass="form-control" type="radio" name="prefferedWayContact" value="Email"> Email
+
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <br>
+                <h3>Load Information</h3>
+                <br>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-4">
+              <p>Date load needs picked up.</p>
+              <input class="form-control" type="text" name="pickup" id="qpickup" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
+            </div>
+
+            <div class="col-md-4">
+              <p>Date load needs delivered.</p>
+              <input class="form-control" type="text" name="drop" id="qdrop" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
+            </div>
+            <div class="col-md-12">
+              <p>Freight description/Shipping details: </p>
+              <textarea class="form-control textarea-expandable" type="text" name="message" id="qmessage" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Description"></textarea>
+            </div>
+            <div class="col-xs-12">
+              <input class="btn btn-primary" type="submit" value="SUBMIT QUOTE REQUEST">
+            </div>
+
+          </div>
+
+
+
+
+
+
+          </form>
+<br><br><br><br>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+{{template "footer"}}

@@ -19,3 +19,11 @@ html {
   padding: 7px;
   transform: .25s;
 }
+
+.textarea-expandable {
+  height: 100px;
+  transition: all .250s;
+  &:focus {
+    height: 200px;
+  }
+}

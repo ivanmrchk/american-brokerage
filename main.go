@@ -10,8 +10,6 @@ import (
 
 var tpl *template.Template
 
-// // // // // // // //
-//
 // root route handler
 func index(w http.ResponseWriter, r *http.Request) {
 
@@ -41,8 +39,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // contactus route handler
 func contactUs(w http.ResponseWriter, r *http.Request) {
 
@@ -72,9 +68,7 @@ func contactUs(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
-// less tCarriers modal load route handler
+// less Carriers  route handler
 func carriers(w http.ResponseWriter, r *http.Request) {
 
 	// execute tamplate
@@ -82,24 +76,43 @@ func carriers(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+}
+
+// quote route handler
+func quote(w http.ResponseWriter, r *http.Request) {
+
+	// parse form value
+	r.ParseForm()
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "quote.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
 	// send Form
 	if r.Method == http.MethodPost {
 
 		// quote form data
-		c := ContactForm{
-			Name:    r.FormValue("name"),
-			Email:   r.FormValue("email"),
-			Phone:   r.FormValue("phone"),
-			Subject: r.FormValue("subject"),
-			Message: r.FormValue("message"),
+		qp := QuotePageForm{
+			Name:           r.FormValue("name"),
+			Title:          r.FormValue("title"),
+			CompanyName:    r.FormValue("companyName"),
+			CompanyAddress: r.FormValue("companyAddress"),
+			City:           r.FormValue("city"),
+			State:          r.FormValue("state"),
+			Zipcode:        r.FormValue("zip"),
+			Email:          r.FormValue("email"),
+			ConfirmEamil:   r.FormValue("confirmEmail"),
+			Phone:          r.FormValue("phone"),
+			Pickup:         r.FormValue("pickup"),
+			Drop:           r.FormValue("drop"),
+			Message:        r.FormValue("message"),
 		}
 
-		c.SendContactForm(w, r)
+		qp.SendQuotePage(w, r)
 	}
 }
 
-// // // // // // // //
-//
 // company route handler
 func company(w http.ResponseWriter, r *http.Request) {
 
@@ -111,8 +124,6 @@ func company(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // less then truck load route handler
 func ltl(w http.ResponseWriter, r *http.Request) {
 
@@ -124,8 +135,6 @@ func ltl(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // less then truck load route handler
 func fullLoad(w http.ResponseWriter, r *http.Request) {
 
@@ -137,8 +146,6 @@ func fullLoad(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // terms route handler
 func terms(w http.ResponseWriter, r *http.Request) {
 
@@ -150,8 +157,6 @@ func terms(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // privacy route handler
 func privacy(w http.ResponseWriter, r *http.Request) {
 
@@ -163,8 +168,6 @@ func privacy(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// // // // // // // //
-//
 // custom 404 route handler
 func customNotFound(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path, "not found route")
@@ -188,7 +191,6 @@ func init() {
 	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("./assets/"))))
 
 	// routes
-	// GET
 	r.HandleFunc("/", index)
 	r.HandleFunc("/company", company)
 	r.HandleFunc("/service", ltl)
@@ -198,9 +200,12 @@ func init() {
 	r.HandleFunc("/terms", terms)
 	r.HandleFunc("/contact-us", contactUs)
 	r.HandleFunc("/carriers", carriers)
+	r.HandleFunc("/quote", quote)
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
+
+	//http.ListenAndServe(":8080", r)
 
 	http.Handle("/", r)
 

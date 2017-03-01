@@ -4981,6 +4981,12 @@ html {
   padding: 7px;
   transform: .25s; }
 
+.textarea-expandable {
+  height: 100px;
+  transition: all .250s; }
+  .textarea-expandable:focus {
+    height: 200px; }
+
 .btn {
   font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;

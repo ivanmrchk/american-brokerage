@@ -27,15 +27,35 @@ jQuery(document).ready(function($) {
     $("#getQuote").submit(function(event) {
 
         var qname = $("#qname")
+        var qtitle = $("#qtitle")
+        var qcompanyAddress = $("#qcompanyAddress")
+        var qcity = $("#qcity")
+        var qstate = $("#qstate option:selected")
+        var qzip = $("#qzip")
+        var qconnfirmEmail = $("#qconfirmEmail")
+        var qpickup = $("#qpickup")
+        var qdrop = $("#qdrop")
         var qemail = $("#qemail")
         var qphone = $("#qphone")
         var qcompanyName = $("#qcompanyName")
         var qmessage = $("#qmessage")
         checkField(qname);
+        checkField(qtitle);
+        checkField(qcompanyAddress);
+        checkField(qcity)
+        checkField(qstate)
+        checkField(qzip)
+        checkField(qconnfirmEmail)
+        checkField(qpickup)
+        checkField(qdrop)
+
+
         checkField(qemail);
         checkField(qphone);
         checkField(qcompanyName);
         checkField(qmessage);
+
+
 
 
 
@@ -235,3 +255,24 @@ jQuery(document).ready(function($) {
     });
 
 });
+
+
+//scroll Conact
+$(document).scroll(function() {
+    contactScroll();
+});
+
+function contactScroll() {
+    var y = window.scrollY;
+    if (y > 505) {
+        $('.make-it-fixed').css({
+            "position": "fixed",
+            "top": "69px"
+        })
+
+    } else if (y < 505) {
+        $('.make-it-fixed').css({
+            "position": "static"
+        })
+    }
+}

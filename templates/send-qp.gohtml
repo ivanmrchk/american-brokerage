@@ -87,7 +87,15 @@ p {
       <tbody>
         <tr>
           <td class="t-title">Name:</td>
-          <td class="t-data">{{.Name}}</td>
+          <td class="t-data">{{.Title}}. {{.Name}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Company Name:</td>
+          <td class="t-data">{{.CompanyName}}</td>
+        </tr>
+        <tr>
+          <td class="t-title">Company Address:</td>
+          <td class="t-data">{{.CompanyAddress}} <br> {{.City}}, {{.State}} {{.Zipcode}}</td>
         </tr>
         <tr>
           <td class="t-title">Email:</td>
@@ -98,11 +106,11 @@ p {
           <td class="t-data">{{.Phone}}</td>
         </tr>
         <tr>
-          <td class="t-title">Company Name:</td>
-          <td class="t-data">{{.CompanyName}}</td>
+          <td class="t-title">Pickup date:<br><br>Delivery date:</td>
+          <td class="t-data">{{.Pickup}} <br><br>{{.Drop}}</td>
         </tr>
         <tr>
-          <td class="t-title">Message:</td>
+          <td class="t-title">Load Details:</td>
           <td class="t-data">{{.Message}}</td>
         </tr>
       </tbody>
