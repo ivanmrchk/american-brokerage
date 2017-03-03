@@ -6510,27 +6510,33 @@ Mobile Menu
 /**
  * With images
  */
-.service-img-list, .about-img-list {
+.about-img-list,
+.service-img-list {
   padding-top: 70px;
   padding-bottom: 40px; }
 
-.service-img-list .service-item, .about-img-list .service-item {
+.about-img-list .service-item,
+.service-img-list .service-item {
   margin-bottom: 30px; }
 
-.service-img-list .content, .about-img-list .content {
+.about-img-list .content,
+.service-img-list .content {
   padding-top: 30px; }
 
 @media (max-width: 1199px) {
-  .service-img-list .content, .about-img-list .content {
+  .about-img-list .content,
+  .service-img-list .content {
     margin-bottom: 30px; } }
-.service-img-list .type, .about-img-list .type {
+.about-img-list .type,
+.service-img-list .type {
   float: left;
   display: block;
   margin-top: -140px;
   position: relative;
   z-index: 2; }
 
-.service-img-list .type i, .about-img-list .type i {
+.about-img-list .type i,
+.service-img-list .type i {
   background-color: #fff;
   color: #ca1f26;
   font-size: 40px;
@@ -6541,7 +6547,8 @@ Mobile Menu
   position: relative;
   clear: both; }
 
-.service-img-list .type i:after, .about-img-list .type i:after {
+.about-img-list .type i:after,
+.service-img-list .type i:after {
   content: '';
   width: 0;
   height: 0;
@@ -6552,11 +6559,13 @@ Mobile Menu
   top: 0;
   right: -50px; }
 
-.service-img-list p, .about-img-list p {
+.about-img-list p,
+.service-img-list p {
   color: #888;
   margin-bottom: 20px; }
 
-.service-img-list h5, .about-img-list h5 {
+.about-img-list h5,
+.service-img-list h5 {
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 10px; }
@@ -6582,6 +6591,14 @@ Mobile Menu
 
 .service-icon-list .content:hover {
   border-color: #ca1f26; }
+
+.service-icon-list .content:hover h3 a {
+  color: #000 !important; }
+
+.btn-download {
+  font-weight: bold; }
+  .btn-download:hover {
+    color: #953027; }
 
 @media (min-width: 768px) {
   .service-icon-list .content {
@@ -6622,16 +6639,19 @@ Mobile Menu
 .service-icon-list h3 {
   font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: .05em; }
+  letter-spacing: 0.05em; }
 
-.service-icon-grid, .maintanance-icon-grid {
+.maintanance-icon-grid,
+.service-icon-grid {
   margin-bottom: 70px; }
 
-.service-icon-grid.style-3, .style-3.maintanance-icon-grid {
-  background: url(../images/services/1920x635/bg-01.jpg);
+.service-icon-grid.style-3,
+.style-3.maintanance-icon-grid {
+  background: url("../images/services/1920x635/bg-01.jpg");
   position: relative; }
 
-.service-icon-grid.style-3:before, .style-3.maintanance-icon-grid:before {
+.service-icon-grid.style-3:before,
+.style-3.maintanance-icon-grid:before {
   content: '';
   position: absolute;
   top: 0;
@@ -6641,25 +6661,30 @@ Mobile Menu
   background: rgba(255, 255, 255, 0.9);
   z-index: 0; }
 
-.service-icon-grid.style-3 .custom-heading, .style-3.maintanance-icon-grid .custom-heading {
+.service-icon-grid.style-3 .custom-heading,
+.style-3.maintanance-icon-grid .custom-heading {
   z-index: 1;
   position: relative; }
 
-.service-icon-grid .type, .maintanance-icon-grid .type {
+.maintanance-icon-grid .type,
+.service-icon-grid .type {
   font-size: 50px;
   color: #232331;
   display: block;
   line-height: 1;
   margin-bottom: 30px; }
 
-.service-icon-grid h3, .maintanance-icon-grid h3 {
+.maintanance-icon-grid h3,
+.service-icon-grid h3 {
   color: #ca1f26; }
 
-.service-img-list.style-2 .type i, .style-2.about-img-list .type i {
+.service-img-list.style-2 .type i,
+.style-2.about-img-list .type i {
   background: #ca1f26;
   color: #fff; }
 
-.service-img-list.style-2 .type i:after, .style-2.about-img-list .type i:after {
+.service-img-list.style-2 .type i:after,
+.style-2.about-img-list .type i:after {
   border-color: transparent transparent transparent #ca1f26;
   border-width: 110px 0 0 50px; }
 

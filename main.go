@@ -68,11 +68,11 @@ func contactUs(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// less Carriers  route handler
-func carriers(w http.ResponseWriter, r *http.Request) {
+//  drive  route handler
+func drive(w http.ResponseWriter, r *http.Request) {
 
 	// execute tamplate
-	err := tpl.ExecuteTemplate(w, "carriers.gohtml", nil)
+	err := tpl.ExecuteTemplate(w, "drive.gohtml", nil)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -199,7 +199,7 @@ func init() {
 	r.HandleFunc("/privacy", privacy)
 	r.HandleFunc("/terms", terms)
 	r.HandleFunc("/contact-us", contactUs)
-	r.HandleFunc("/carriers", carriers)
+	r.HandleFunc("/drive", drive)
 	r.HandleFunc("/quote", quote)
 
 	// Not found
