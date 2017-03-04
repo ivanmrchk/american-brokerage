@@ -24,67 +24,66 @@ jQuery(document).ready(function($) {
     }
     // validator
     // get quote
-    $("#getQuote").submit(function(event) {
+    $("#form").submit(function(event) {
 
-        var qname = $("#qname")
-        var qtitle = $("#qtitle")
-        var qcompanyAddress = $("#qcompanyAddress")
-        var qcity = $("#qcity")
-        var qstate = $("#qstate option:selected")
-        var qzip = $("#qzip")
-        var qconnfirmEmail = $("#qconfirmEmail")
-        var qpickup = $("#qpickup")
-        var qdrop = $("#qdrop")
-        var qemail = $("#qemail")
-        var qphone = $("#qphone")
-        var qcompanyName = $("#qcompanyName")
-        var qmessage = $("#qmessage")
-        checkField(qname);
-        checkField(qtitle);
-        checkField(qcompanyAddress);
-        checkField(qcity)
-        checkField(qstate)
-        checkField(qzip)
-        checkField(qconnfirmEmail)
-        checkField(qpickup)
-        checkField(qdrop)
+        var name = $("#name")
+        var title = $("#title")
+        var companyAddress = $("#companyAddress")
+        var city = $("#city")
+        var state = $("#state option:selected")
+        var zip = $("#zip")
+        var connfirmEmail = $("#confirmEmail")
+        var pickup = $("#pickup")
+        var drop = $("#drop")
+        var email = $("#email")
+        var phone = $("#phone")
+        var companyName = $("#companyName")
+        var message = $("#message")
+        var subject = $("#subject")
+        var last = $("#last")
+        var mc = $("#mc")
+        var dispatchName = $("#dispatchName")
+        var dispatchPhone = $("#dispatchPhone")
+        var dispatchEmail = $("#dispatchEmail")
+        var insuranceCertificate = $("#insuranceCertificate")
+        var w9 = $("#w9")
+        var carrierAuthority = $("#carrierAuthority")
+        var references = $("#references")
+        var carrierBrokerAgreement = $("#carrierBrokerAgreement")
+        var numberOfTrucks = $("#numberOfTrucks")
+        var numberOfTrailers = $("#numberOfTrailers")
+        var numberOfDriverTeams = $("#numberOfDriverTeams")
+        checkField(numberOfDriverTeams)
+        checkField(numberOfTrailers)
+        checkField(numberOfTrucks)
+        checkField(carrierBrokerAgreement)
+        checkField(references)
+        checkField(carrierAuthority)
+        checkField(w9)
+        checkField(insuranceCertificate)
+        checkField(dispatchName)
+        checkField(dispatchPhone)
+        checkField(dispatchEmail)
+        checkField(name);
+        //checkField(title);
+        checkField(companyAddress);
+        checkField(city)
+        checkField(state)
+        checkField(zip)
+        checkField(connfirmEmail)
+        checkField(pickup)
+        checkField(drop)
+        checkField(subject)
+        //checkField(last)
+        checkField(email);
+        checkField(phone);
+        checkField(companyName);
+        checkField(message);
+        checkField(mc)
 
 
-        checkField(qemail);
-        checkField(qphone);
-        checkField(qcompanyName);
-        checkField(qmessage);
 
 
-
-
-
-    })
-    // contact modal
-    $("#contactModal").submit(function(event) {
-
-        var cname = $("#cname")
-        var cemail = $("#cemail")
-        var cphone = $("#cphone")
-        var cmessage = $("#cmessage")
-        checkField(cname);
-        checkField(cemail);
-        checkField(cphone);
-        checkField(cmessage);
-
-    })
-    $("#contactFormPage").submit(function(event) {
-
-        var cfname = $("#cfname")
-        var cfemail = $("#cfemail")
-        var cfphone = $("#cfphone")
-
-        var cfmessage = $("#cfmessage")
-        checkField(cfname);
-        checkField(cfemail);
-        checkField(cfphone);
-
-        checkField(cfmessage);
 
     })
 

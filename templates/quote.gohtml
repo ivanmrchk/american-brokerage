@@ -42,7 +42,7 @@
 
         <div class="contact-form">
 
-          <form  method="post"  id="getQuote">
+          <form  method="post"  id="form">
             <div class="row">
               <div class="col-md-12">
                 <br>
@@ -53,13 +53,13 @@
             <div class="row">
               <!-- NAME -->
               <div class="col-lg-4">
-                <input class="form-control" type="text" name="name" id="qname" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Your name here">
+                <input class="form-control" type="text" name="name" id="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Your name here">
               </div>
             </div>
             <div class="row">
               <!-- TITLE -->
               <div class="col-lg-4">
-                <input class="form-control" type="text" name="title" id="qtitle" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Title">
+                <input class="form-control" type="text" name="title" id="title" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Title">
               </div>
             </div>
 
@@ -73,19 +73,19 @@
 
             <div class="row">
               <div class="col-md-6">
-                <input class="form-control" type="text" name="companyName" id="qcompanyName" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Name">
+                <input class="form-control" type="text" name="companyName" id="companyName" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Name">
               </div>
             </div>
             <div class="row">
               <div class="col-md-4">
-                <input class="form-control" type="text" name="companyAddress" id="qcompanyAddress" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Address">
+                <input class="form-control" type="text" name="companyAddress" id="companyAddress" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Company Address">
               </div>
               <div class="col-md-4">
-                <input class="form-control" type="text" name="city" id="qcity" value="" size="40" aria-required="true" aria-invalid="false" placeholder="City">
+                <input class="form-control" type="text" name="city" id="city" value="" size="40" aria-required="true" aria-invalid="false" placeholder="City">
               </div>
 
               <div class="col-md-2">
-                <select class="form-control" id="qstate">
+                <select class="form-control" id="state">
                 	<option value="AL">AL</option>
                 	<option value="AK">AK</option>
                 	<option value="AZ">AZ</option>
@@ -140,7 +140,7 @@
                 </select>
               </div>
               <div class="col-md-2">
-                <input class="form-control" type="text" name="zip" id="qzip" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Zip code">
+                <input class="form-control" type="text" name="zip" id="zip" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Zip code">
               </div>
             </div>
 
@@ -154,15 +154,15 @@
 
             <div class="row">
               <div class="col-md-4">
-                <input class="form-control" type="email" name="email" id="qemail" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email">
+                <input class="form-control" type="email" name="email" id="email" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email">
               </div>
 
               <div class="col-md-4">
-                <input class="form-control" type="email" name="confirmEmail" id="qconfirmEmail" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Confirm Email">
+                <input class="form-control" type="email" name="confirmEmail" id="confirmEmail" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Confirm Email">
               </div>
 
               <div class="col-md-4">
-                <input class="form-control" type="tel" name="phone" id="qphone" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Direct Line/Phone">
+                <input class="form-control" type="tel" name="phone" id="phone" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Direct Line/Phone">
               </div>
               <div class="col-md-12">
                 <p><strong>How would you like to be contacted</strong></p>
@@ -184,16 +184,16 @@
             <div class="row">
             <div class="col-md-4">
               <p>Date load needs picked up.</p>
-              <input class="form-control" type="text" name="pickup" id="qpickup" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
+              <input class="form-control" type="text" name="pickup" id="pickup" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
             </div>
 
             <div class="col-md-4">
               <p>Date load needs delivered.</p>
-              <input class="form-control" type="text" name="drop" id="qdrop" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
+              <input class="form-control" type="text" name="drop" id="drop" value="" size="40" aria-required="true" aria-invalid="false" placeholder="MM/DD/YYYY">
             </div>
             <div class="col-md-12">
               <p>Freight description/Shipping details: </p>
-              <textarea class="form-control textarea-expandable" type="text" name="message" id="qmessage" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Description"></textarea>
+              <textarea class="form-control textarea-expandable" type="text" name="message" id="message" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Description"></textarea>
             </div>
             <div class="col-xs-12">
               <input class="btn btn-primary" type="submit" value="SUBMIT QUOTE REQUEST">

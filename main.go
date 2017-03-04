@@ -113,6 +113,22 @@ func quote(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// carriers route handler
+func carriers(w http.ResponseWriter, r *http.Request) {
+
+	// parse form value
+	r.ParseForm()
+	// execute tamplate
+	err := tpl.ExecuteTemplate(w, "carriers.gohtml", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// send Form
+	if r.Method == http.MethodPost {
+
+	}
+}
+
 // company route handler
 func company(w http.ResponseWriter, r *http.Request) {
 
@@ -201,6 +217,7 @@ func init() {
 	r.HandleFunc("/contact-us", contactUs)
 	r.HandleFunc("/drive", drive)
 	r.HandleFunc("/quote", quote)
+	r.HandleFunc("/drive/carriers", carriers)
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
