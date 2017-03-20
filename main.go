@@ -184,6 +184,20 @@ func privacy(w http.ResponseWriter, r *http.Request) {
 
 }
 
+// drivers route handler
+func drivers(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "/contact-us", http.StatusSeeOther)
+
+}
+
+// owners route handler
+func owners(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "/contact-us", http.StatusSeeOther)
+
+}
+
 // custom 404 route handler
 func customNotFound(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path, "not found route")
@@ -218,6 +232,8 @@ func init() {
 	r.HandleFunc("/drive", drive)
 	r.HandleFunc("/quote", quote)
 	r.HandleFunc("/drive/carriers", carriers)
+	r.HandleFunc("/drive/drivers", drivers)
+	r.HandleFunc("/drive/owners", owners)
 
 	// Not found
 	r.NotFoundHandler = http.HandlerFunc(customNotFound)
